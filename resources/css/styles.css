@@ -1,10 +1,9 @@
-
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
 
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #777;
   box-sizing: border-box;
 }
@@ -16,7 +15,6 @@ p {
 a {
   text-decoration: none;
 }
-
 
 /* ============================================= */
 /*              Typography                       */
@@ -47,7 +45,6 @@ a {
   border-radius: 5px;
 }
 
-
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
@@ -62,7 +59,7 @@ a {
   padding: 1em 10px;
 }
 
-[class^=col] {
+[class^="col"] {
   margin-top: 10px;
   flex-basis: 100%;
   min-height: 25px;
@@ -122,7 +119,6 @@ a {
   flex-basis: 100%;
 }
 
-
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
@@ -140,16 +136,13 @@ a {
   padding: 10px 0;
   display: block;
   width: 100%;
-  transition: 
-    background-color .2s ease-in-out, 
-    color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
 }
-
 
 /* ============================================= */
 /*              Buttons                          */
@@ -185,7 +178,6 @@ a {
   background-color: #fd7856;
 }
 
-
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
@@ -194,7 +186,7 @@ a {
   flex-basis: 100%;
 }
 
-.input{
+.input {
   display: block;
   width: 94%;
   margin: 10px auto 0;
@@ -204,14 +196,13 @@ a {
 }
 
 .hidden {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
-
 
 /* ============================================= */
 /*              Images                           */
@@ -222,7 +213,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
 }
 
@@ -242,109 +233,106 @@ a {
   margin-right: auto;
 }
 
-
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.container {
-  max-width: 1400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .row {
+    flex-direction: row;
+  }
 
-.row {
-  flex-direction: row;
-}
+  [class^="col"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
 
-[class^=col] {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  align-items: center;
-}
+  [class^="col"] + [class^="col"] {
+    margin-left: 10px;
+  }
 
-[class^=col] + [class^=col] {
-  margin-left: 10px;
-}
+  .col-1 {
+    flex-basis: 8.33%;
+  }
 
-.col-1 {
-  flex-basis: 8.33%;
-}
+  .col-2 {
+    flex-basis: 16.67%;
+  }
 
-.col-2 {
-  flex-basis: 16.67%;
-}
+  .col-3 {
+    flex-basis: 25%;
+  }
 
-.col-3 {
-  flex-basis: 25.00%;
-}
+  .col-4 {
+    flex-basis: 33.33%;
+  }
 
-.col-4 {
-  flex-basis: 33.33%;
-}
+  .col-5 {
+    flex-basis: 41.67%;
+  }
 
-.col-5 {
-  flex-basis: 41.67%;
-}
+  .col-6 {
+    flex-basis: 50%;
+  }
 
-.col-6 {
-  flex-basis: 50.00%;
-}
+  .col-7 {
+    flex-basis: 58.33%;
+  }
 
-.col-7 {
-  flex-basis: 58.33%;
-}
+  .col-8 {
+    flex-basis: 66.67%;
+  }
 
-.col-8 {
-  flex-basis: 66.67%;
-}
+  .col-9 {
+    flex-basis: 75%;
+  }
 
-.col-9 {
-  flex-basis: 75.00%
-}
+  .col-10 {
+    flex-basis: 83.33%;
+  }
 
-.col-10 {
-  flex-basis: 83.33%;
-}
+  .col-11 {
+    flex-basis: 91.67%;
+  }
 
-.col-11 {
-  flex-basis: 91.67%;
-}
+  .col-12 {
+    flex-basis: 100%;
+  }
 
-.col-12 {
-  flex-basis: 100%;
-}
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.nav {
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
+  .nav-link {
+    flex-basis: 100px;
+  }
 
-.nav-link {
-  flex-basis: 100px;
-}
+  .btn {
+    padding: 10px 30px;
+  }
 
-.btn {
-  padding: 10px 30px;
-}
+  .btn + .btn {
+    margin-left: 10px;
+  }
 
-.btn + .btn {
-  margin-left: 10px;
-}
-
-.logo {
-  margin-left: initial;
-  margin-right: initial;
-}
-
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
