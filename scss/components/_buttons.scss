@@ -10,24 +10,24 @@
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color 0.4s ease;
 }
-
 .default {
-  background-color: $sec-2;
+  @include btn-hover($sec-2);
 }
 
 .error {
-  background-color: $ter-3;
+  @include btn-hover($ter-3);
 }
 
 .info {
-  background-color: $ter-1;
+  @include btn-hover($ter-1);
 }
 
 .success {
-  background-color: $ter-4;
+  @include btn-hover($ter-4);
 }
 
 .warning {
-  background-color: $ter-2;
+  @include btn-hover($ter-2);
 }
